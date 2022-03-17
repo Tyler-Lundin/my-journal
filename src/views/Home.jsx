@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import wood_texture from '../assets/wood-texture.jpg'
 import Display from '../components/journal/Display'
 import Journal from '../components/journal/Journal'
+import Page from '../components/page/Page'
 
 const Home = () => {
     const S = {}
@@ -19,8 +20,8 @@ const Home = () => {
             <Display>
                 <Journal/>
                 <Journal/>
-
             </Display>
+            <Page/>
         </S.Container>
     )
 }

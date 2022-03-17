@@ -16,7 +16,7 @@ const Journal = () => {
         transform: scale(100%);
         transition: .6s;
         :hover {
-            transform: scale(105%);
+            transform: scale(110%);
             box-shadow: 0 0 20px 8px black;
         }
     `
@@ -37,7 +37,6 @@ const JournalBackground = () => {
         overflow: hidden;
         img {
             object-fit: cover;
-            height: 100%;
             width: 100%;
             
         }
@@ -64,7 +63,7 @@ const JournalTitle = () => {
     `
     return (
         <S.Container>
-            My Journal
+            gym
         </S.Container>
     )
 }
