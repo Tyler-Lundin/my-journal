@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import dark_paper_texture from '../../assets/dark-paper-texture.jpg'
 import light_paper_texture from '../../assets/light-paper-texture.jpg'
-import {GrNext, GrPrevious} from 'react-icons/gr'
+import wood_texture from '../../assets/wood-texture.jpg'
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 
 const Page = () => {
     const S = {}
@@ -9,33 +10,38 @@ const Page = () => {
         width: 100vw;
         height: 100vh;
         position: relative;
-    `
-    S.TextArea = styled.textarea`
-        background: none;
-        width: 100vw;
-        height: 100%;
-        position: absolute;
-        font-size: 2rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     `
     return (
         <S.Container>
-            <PageBackground/>
-            <S.TextArea/>
             <PageNavigation/>
+            <TextArea/>
         </S.Container>
     )
 }
 
-const PageBackground = () => {
+const TextArea = () => {
     const S = {}
     S.Container = styled.div`
         width: 100%;
-        height: 100%;
+        height: calc(100% - 50px);
         position: absolute;
+        z-index: 65;
+        bottom: 0;
+        box-shadow: 0 0 3px 1px black;
     `
-    return(
+    S.TextArea = styled.textarea`
+        background: none;
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        resize: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background: url(${light_paper_texture});
+    `
+    return (
         <S.Container>
-            <img src={light_paper_texture} alt='paper texture'/>
+            <S.TextArea/>
         </S.Container>
     )
 }
@@ -45,16 +51,24 @@ export default Page
 const PageNavigation = () => {
     const S = {}
     S.Container = styled.div`
-        width: 100vw;
-        height: 80px;
+        width: 100%;
+        height: 50px;
         position: absolute;
-        bottom: 0;
-        background: rgba(255,255,255,0.5);
+        top: 0;
+        color: white;
+        display: grid;
+        justify-items: center;
+        background-size: 100%;
+        background-position: center;
     `
     S.Buttons = styled.div`
-        width: 100%;
+        width: 40%;
         height: 100%;
         position: relative;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-items: center;
     `
     return(
         <S.Container>
@@ -70,16 +84,17 @@ const PageNavigation = () => {
 const PageNext = () => {
     const S = {}
     S.Container = styled.div`
-        position: absolute;
-        right: 10%;
+        height: 60%;
+        width: fit-content;
         svg {
-            height: 80px;
-            width: 80px;
+            height: 100%;
+            width: 100%;
+            color: white;
         }
     `
     return (
         <S.Container>
-            <GrNext/>
+            <IoIosArrowForward/>
         </S.Container>
     )
 }
@@ -87,16 +102,17 @@ const PageNext = () => {
 const PagePrevious = () => {
     const S = {}
     S.Container = styled.div`
-        position: absolute;
-        left: 10%;
+        height: 60%;
+        width: fit-content;
         svg {
-            height: 80px;
-            width: 80px;
+            height: 100%;
+            width: 100%;
+            color: white;
         }
     `
     return (
         <S.Container>
-            <GrPrevious/>
+            <IoIosArrowBack/>
         </S.Container>
     )
 }
@@ -104,15 +120,16 @@ const PagePrevious = () => {
 const PageCounter = () => {
     const S = {}
     S.Container = styled.div`
-        position: absolute;
-        width: fit-content;
-        left: 50%; top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
+        width: 100%;
+        font-size: 1.3rem;
+        height: 100%;
+        text-align: center;
+        display: grid;
+        align-items: center;
     `
     return (
         <S.Container>
-            1 of 99
+            1 / 99
         </S.Container>
     )
 }

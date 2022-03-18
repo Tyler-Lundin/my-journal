@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import wood_texture from '../assets/wood-texture.jpg'
 import Display from '../components/journal/Display'
@@ -5,6 +6,8 @@ import Journal from '../components/journal/Journal'
 import Page from '../components/page/Page'
 
 const Home = () => {
+    const isJournalOpen = useSelector(state => state.journal.value.isJournalOpen)
+
     const S = {}
     S.Container = styled.div`
         width: 100vw;
@@ -17,11 +20,16 @@ const Home = () => {
     return (
         <S.Container>
             <Background/>
-            <Display>
-                <Journal/>
-                <Journal/>
-            </Display>
-            <Page/>
+
+            {
+                isJournalOpen ? 
+                    <Display>
+                        <Journal/>
+                        <Journal/>
+                    </Display>
+                    :
+                    <Page/>
+            }
         </S.Container>
     )
 }

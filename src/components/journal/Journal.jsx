@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 import {useState} from 'react'
 import journal_texture from '../../assets/journal-texture.jpg'
+import { useDispatch } from 'react-redux'
+import { setOpen } from '../../app/state/PromptSlice'
 
 
 const Journal = () => {
+    const dispatch = useDispatch()
     const S = {}
     S.Container = styled.div`
         width: 400px;
@@ -20,8 +23,11 @@ const Journal = () => {
             box-shadow: 0 0 20px 8px black;
         }
     `
+    const handleClick = () => {
+        dispatch(setOpen(true))
+    }
     return (
-        <S.Container>
+        <S.Container onClick={handleClick}>
             <JournalBackground/>
             <JournalTitle/>
         </S.Container>
@@ -50,6 +56,7 @@ const JournalBackground = () => {
 
 
 const JournalTitle = () => {
+    
     const S = {}
     S.Container = styled.div`
         position: absolute;
