@@ -29,6 +29,6 @@ display: grid;
 justify-items: center;
 align-items: center;
 background: url(${wood_texture}); 
-background-size: 100%;
+background-size: cover;
 `
 

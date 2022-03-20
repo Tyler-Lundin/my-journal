@@ -33,8 +33,8 @@ const Journal = (props) => {
 export default Journal
 
 const BiggerContainer = styled.div`
-    width: 70vw;
-    height: 80vw;
+    width: 85vw;
+    height: 100vw;
     max-width: 500px;
     max-height: 600px;
     position: relative;
@@ -43,8 +43,8 @@ const BiggerContainer = styled.div`
 `
 
 const Container = styled.div`
-    width: 55vw;
-    height: 75vw;
+    width: 70vw;
+    height: 100vw;
     max-width: 400px;
     max-height: 600px;
     position: relative;
