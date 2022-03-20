@@ -49,7 +49,6 @@ const Container = styled.div`
 const OptionsMenu = styled.div`
     width: 40px;
     height: fit-content;
-    background: rgba(255,255,255,0.5);
     position: absolute;
     border-radius: 100%;
     visibility: hidden;
@@ -58,11 +57,11 @@ const OptionsMenu = styled.div`
         visibility: visible;
     }
     svg {
-        color: black;
+        color: white;
         height: fit-content;
         transition: color 250ms;
         :hover {
-            color: red;
+            color: black;
         }
     }
 `
