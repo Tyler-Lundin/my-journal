@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { setCurrentPage, setPageList } from '../../app/state/PageSlice'
-import light_paper_texture from '../../assets/light-paper-texture.jpg'
 import saveJournal from '../../util/save/saveJournal.ts'
 
 const TextArea = () => {
@@ -50,7 +49,6 @@ const PageTextArea = styled.textarea`
     line-height: 2rem;
     resize: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background: url(${light_paper_texture}); */
     position: relative;
     z-index: 20;
     /* overflow-y: hidden; */
