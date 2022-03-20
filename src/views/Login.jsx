@@ -1,4 +1,3 @@
-import { auth } from '../util/firebase'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
@@ -12,18 +11,17 @@ const uiConfig = {
     ],
   };
   
-  
-const Login = (props) => {
-    const S = {}
-    S.Container = styled.div`
-        width: 100vw;
-        height: 100vh;
-    `
+const Login = () => {
     return (
-        <S.Container>
+        <Container>
             <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
-        </S.Container>
+        </Container>
     )
 }
 
 export default Login
+
+const Container = styled.div`
+width: 100vw;
+height: 100vh;
+`

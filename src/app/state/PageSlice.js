@@ -3,24 +3,32 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = { 
-    value: 0
+    value: {
+      currentPage: '',
+      pageList: [],
+      currentIndex: 1,
+      journalID: ''
+    }
 }
 
 const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-    increment(state) {
-      state.value++
+    setCurrentPage(state, action) {
+      state.value.currentPage = action.payload
     },
-    decrement(state) {
-      state.value--
+    setPageList(state, action) {
+      state.value.pageList = action.payload
     },
-    incrementByAmount(state, action) {
-      state.value += action.payload
+    setCurrentIndex(state, action) {
+      state.value.currentIndex = action.payload
+    },
+    setJournalID(state, action) {
+      state.value.journalID = action.payload
     },
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { setCurrentPage, setPageList, setCurrentIndex, setJournalID } = counterSlice.actions
 export default counterSlice.reducer
