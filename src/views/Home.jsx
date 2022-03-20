@@ -9,9 +9,6 @@ const Home = () => {
 
     return (
         <Container>
-            <Background>
-                <img src={wood_texture} alt='wood texture'/>
-            </Background>
             {
                 isJournalOpen ? 
                     <Page/>
@@ -30,18 +27,8 @@ height: 100vh;
 overflow: hidden;
 display: grid;
 justify-items: center;
-align-items: center;        
+align-items: center;
+background: url(${wood_texture}); 
+background-size: 100%;
 `
 
-const Background = styled.div`
-width: 100%;
-height: 100%;
-overflow: hidden;
-position: absolute;
-top: 0; left: 0;
-img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-`
