@@ -18,7 +18,7 @@ position: absolute;
 width: 100%;
 height: fit-content;
 color: rgba(255,255,255,0.7);
-font-size: 6rem;
+font-size: 4rem;
 text-align: center;
 top: 15%; 
 overflow-wrap: break-word;

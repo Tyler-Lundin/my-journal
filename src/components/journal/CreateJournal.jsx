@@ -29,7 +29,7 @@ const CreateJournal = () => {
             {
                 popupOpen ? 
                 <Popup>
-                    <h1>Create Journal {createNewTitle === '' ? '' : `'${createNewTitle}'`} </h1>
+                    <h1>Create Journal <br/>{createNewTitle === '' ? '' : `'${createNewTitle}'`} </h1>
                     <TitleInput type={'text'} placeholder='title' maxLength={15} onChange={(e)=>handleChange(e)}/>
                     <ButtonContainer>
                         <NoButton onClick={()=>setPopupOpen(false)}>NO</NoButton>
@@ -68,15 +68,18 @@ const Popup = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     h1 {
         color: white;
+        text-align: center;
     }
 `
 
 const TitleInput = styled.input`
     width: 50vw;
     height: 6rem;
-    font-size: 6rem;
+    font-size: 3rem;
     text-align: center;
     
     ::placeholder {
@@ -86,7 +89,7 @@ const TitleInput = styled.input`
 
 const YesButton = styled.button`
     border: none;
-    font-size: 4rem ;
+    font-size: 3rem ;
     margin: 0 12vw;
     background: none;
     outline: none;
@@ -105,7 +108,7 @@ const YesButton = styled.button`
 
 const NoButton = styled.button`
     border: none;
-    font-size: 4rem;    
+    font-size: 3rem;    
     margin: 0 12vw;
     color: white;
     background: none;

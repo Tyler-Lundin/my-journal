@@ -33,16 +33,20 @@ const Journal = (props) => {
 export default Journal
 
 const BiggerContainer = styled.div`
-    width: 500px;
-    height: 600px;
+    width: 70vw;
+    height: 80vw;
+    max-width: 500px;
+    max-height: 600px;
     position: relative;
     display: grid;
     justify-items: center;
 `
 
 const Container = styled.div`
-    width: 400px;
-    height: 600px;
+    width: 55vw;
+    height: 75vw;
+    max-width: 400px;
+    max-height: 600px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
