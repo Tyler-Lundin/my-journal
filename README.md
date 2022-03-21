@@ -2,7 +2,7 @@
 
 Big focus on this build folder / file structure / Encryption for privacy
 
-Using Redux, Redux Tools, Styled-Components, Firebase, CryptoJS
+Using Redux, Redux Tools, Styled-Components, Firebase
 
 
 DATABASE STRUCTURE 
